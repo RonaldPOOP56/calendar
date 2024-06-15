@@ -1,26 +1,20 @@
-// Get all elements on the page
-const allElements = document.querySelectorAll('*');
+const form = document.getElementById('form');
 
-// Function to hide all elements
-function hideAllElements() {
-  allElements.forEach(element => {
-    element.style.type = 'none';
-  });
-}
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
 
-// Function to show all elements
-function showAllElements() {
-  allElements.forEach(element => {
-    element.style.display = '';
-  });
-}
+  // Get the last form submission time from localStorage
+  const lastSubmissionTime = localStorage.getItem('lastFormSubmissionTime');
 
-// Add event listener to a button
-const myButton = document.getElementById('myButton');
-myButton.addEventListener('click', () => {
-  hideAllElements();
-  // Do something else here, like show a loading spinner or a message
-  
-  // After a short delay, show all elements again
-  setTimeout(showAllElements, 2000);
+  // Check if the form has been submitted within the last 24 hours
+  if (lastSubmissionTime && (Date.now() - lastSubmissionTime) < 24 * 60 * 60 * 1000) {
+    // Redirect the user to a different website
+    window.location.href = 'https://www.stickergenius.com/wp-content/uploads/2020/09/back2school-covid-RED-08.jpg';
+  } else {
+    // Update the last submission time in localStorage
+    localStorage.setItem('lastFormSubmissionTime', Date.now());
+
+    // Submit the form
+    form.submit();
+  }
 });

@@ -1,9 +1,10 @@
 <html>
     <head>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
         <title>Book with Kingsley</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <script src="https://hcaptcha.com/1/api.js" async defer></script>
     </head>
     <div class="container">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FHong_Kong&bgcolor=%23ffffff&src=OWVlMDU1YzQ1Mzk5MDBhNWY4YzllZTE0ZTdhYWVjOTZhMzllMTVkNTM0Yzk5YzE4NzRlMWEwNmRlMjUyMGM4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -26,10 +27,8 @@
             <textarea name="message" id="Description" required></textarea>
             <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-        
             <!-- Custom Confirmation / Success Page -->
             <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-        
             <button type="submit" onclick="alert('You sure you submitting to Kingsley?')">Submit Form</button>
         
         </form>
