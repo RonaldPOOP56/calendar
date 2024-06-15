@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* Set a maximum width for the container */
+  }
+  
+  .container iframe,
+  .form-container {
+    margin-bottom: 20px;
+    width: 100%; /* Make the iframe and form container fill the container */
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the form */
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+  
+  .form-container input,
+  .form-container textarea,
+  .form-container button {
+    margin-bottom: 10px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .form-container form {
+      max-width: 100%; /* Make the form fill the container on small screens */
+    }
+  }
