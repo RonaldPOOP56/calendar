@@ -6,15 +6,19 @@
         <title>Book with Kingsley</title>
         <script src="https://hcaptcha.com/1/api.js" async defer></script>
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css">
     </head>
-    <div class="container">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FHong_Kong&bgcolor=%23ffffff&src=OWVlMDU1YzQ1Mzk5MDBhNWY4YzllZTE0ZTdhYWVjOTZhMzllMTVkNTM0Yzk5YzE4NzRlMWEwNmRlMjUyMGM4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-    <h1>FORM FOR BOOKING WITH KINGSLEY</h1>
-    <div class="form-container">
-        <form action="https://api.web3forms.com/submit" method="POST" id="form">
-    
-            <!-- Replace with your Access Key -->
+    <body>
+        <div class="container">
+            <div class="calendar-form-container">
+                <div class="calendar-container">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FHong_Kong&bgcolor=%23ffffff&src=OWVlMDU1YzQ1Mzk5MDBhNWY4YzllZTE0ZTdhYWVjOTZhMzllMTVkNTM0Yzk5YzE4NzRlMWEwNmRlMjUyMGM4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="form-container">
+                    <h1>FORM FOR BOOKING WITH KINGSLEY</h1>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <!-- form elements here -->
+                          <!-- Replace with your Access Key -->
             <input type="hidden" name="access_key" value="10115cee-e9b8-4c04-b563-18c5c67cfca6">
         
             <!-- Form Inputs. Each input must have a name="" attribute -->
@@ -32,8 +36,9 @@
             <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
             <button type="submit" onclick="alert('You sure you submitting to Kingsley?')">Submit Form</button>
         
-        </form>
-    </div>
-    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
-
